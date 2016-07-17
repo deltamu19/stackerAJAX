@@ -32,7 +32,9 @@ var showQuestion = function(question) {
 };
 
 var showAnswerer = function(answerer) {
+
 	var result = $('.templates .inspiration').clone();
+
 
 	var answererElem = result.find('.user a');
 	answererElem.attr('href', answerer.user.link);
