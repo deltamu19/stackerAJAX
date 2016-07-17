@@ -36,10 +36,10 @@ var showAnswerer = function(answerer) {
 
 	var answererElem = result.find('.user a');
 	answererElem.attr('href', answerer.user.link);
-	answerElem.text(answerer.user.display_name);
+	answererElem.text(answerer.user.display_name);
 
-	var profilePic = result.find('.profile-pic');
-	postCount.html(answerer.user.profile_image);
+	var profilePic = result.find('.profile-pic img');
+	profilePic.attr('src', answerer.user.profile_image);
 
 	var rep = result.find('.reputation');
 	rep.text(answerer.user.reputation);
