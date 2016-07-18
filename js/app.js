@@ -45,6 +45,7 @@ var showAnswerer = function(answerer) {
 
 	var rep = result.find('.reputation');
 	rep.text(answerer.user.reputation);
+	return result;
 };
 
 // this function takes the results object from StackOverflow
@@ -115,7 +116,7 @@ var getAnswerers = function(tags) {
 
 		$.each(result.items, function(i, item) {
 			var answerer = showAnswerer(item);
-			$('.result').append(answerer);
+			$('.results').append(answerer);
 		});
 	})
 	.fail(function(jqXHR, error){
